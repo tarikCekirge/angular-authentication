@@ -1,0 +1,35 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            <h2>Kayıt</h2>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="form" [formGroup]="registerForm" (ngSubmit)="proceedRegisteration()">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Kulanıcı Adı:</mat-label>
+                    <input matInput formControlName="id">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>İsim:</mat-label>
+                    <input matInput formControlName="name">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Şifre:</mat-label>
+                    <input type="password" matInput formControlName="password">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Email:</mat-label>
+                    <input matInput formControlName="email">
+                </mat-form-field>
+                <mat-radio-group formControlName="gender" aria-label="Select an option">
+                    <mat-radio-button value="male">Erkek</mat-radio-button>
+                    <mat-radio-button value="female">Kadın</mat-radio-button>
+                </mat-radio-group>
+                <div class="buttons">
+                    <button mat-raised-button color="primary">Gönder</button>
+                    <a routerLink="/login" mat-raised-button color="accent">Giriş Sayfası</a>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

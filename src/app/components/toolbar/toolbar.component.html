@@ -1,0 +1,8 @@
+<mat-toolbar *ngIf="isMenuRequired">
+    <span>Angular Authentication </span>
+    <button mat-flat-button routerLink="/"> Home</button>
+    <button *ngIf="idAdminUser" mat-flat-button routerLink="/user">User</button>
+    <span class="spacer"></span>
+    <button mat-flat-button routerLink="/login"> {{isMenuRequired?'Çıkış':'Giriş'}}</button>
+    <button *ngIf="!isMenuRequired" mat-flat-button routerLink="/register">register</button>
+</mat-toolbar>

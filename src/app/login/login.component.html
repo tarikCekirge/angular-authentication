@@ -1,0 +1,24 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            <h2>Giriş</h2>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="form" [formGroup]="loginForm" (ngSubmit)="proceedLogin()">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Kulanıcı Adı:</mat-label>
+                    <input matInput formControlName="userName">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Şifre:</mat-label>
+                    <input type="password" matInput formControlName="password">
+                </mat-form-field>
+                <div class="buttons">
+                    <button mat-raised-button color="primary">Giriş</button>
+                    <a routerLink="/register" mat-raised-button color="accent">Kayıt Ol</a>
+
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

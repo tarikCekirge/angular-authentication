@@ -1,0 +1,25 @@
+<div class="container">
+    <mat-card>
+        <mat-card-header>
+            <h2>Rol Güncelle</h2>
+        </mat-card-header>
+        <mat-card-content>
+            <form class="form" [formGroup]="updateForm" (ngSubmit)="updateUser()">
+                <mat-form-field>
+                    <mat-label>Kullanıcı Rolu:</mat-label>
+                    <mat-select formControlName="role">
+                        <mat-option value="" disabled>Seçiniz</mat-option>
+                        @for (item of roleList; track roleList) {
+                        <mat-option [value]="item.id">{{item.name}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+                <mat-checkbox formControlName="isActive">Üyeyi Aktif Et</mat-checkbox>
+                <div class="buttons">
+                    <button mat-raised-button color="primary">Kaydet</button>
+                    <a mat-dialog-close mat-raised-button color="accent">Kapat</a>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

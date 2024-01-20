@@ -1,0 +1,14 @@
+mat-card {
+  margin-top: 32px !important;
+  max-width: 720px;
+  margin: 0 auto;
+  .form {
+    display: grid;
+    gap: 16px;
+    .buttons {
+      * {
+        margin-right: 16px;
+      }
+    }
+  }
+}
